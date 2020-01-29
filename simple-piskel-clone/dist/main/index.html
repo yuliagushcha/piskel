@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link href="style.css" rel="stylesheet">
+  <title>Simple-Piskel-Clone</title>
+<link href="style.css" rel="stylesheet"></head>
+
+<body>
+  <div class="wrapper">
+    <section class="header">
+      <div class="logo"></div>
+      <h1 class="headerText">New Piskel</h1>
+      <nav class="navigation">
+        <a href="index.html" target="_blank"><button class="createButton">Create Sprite</button></a>
+        <button class="loginButton">Sign in</button>
+      </nav>
+    </section>
+    <section class="main">
+      <div class="toolsContainer">
+        <section class="tools">
+          <div class="changeSize">
+            <label>
+              <input type="radio" name="size" value="1" checked>
+              <span></span>
+            </label>
+            <label>
+              <input type="radio" name="size" value="2">
+              <span></span>
+            </label>
+            <label>
+              <input type="radio" name="size" value="3">
+              <span></span>
+            </label>
+            <label>
+              <input type="radio" name="size" value="4">
+              <span></span>
+            </label>
+          </div>
+
+          <label class="pen">
+            <input type="radio" name="tool" value="pen" checked>
+            <span></span>
+          </label>
+
+          <label class="bucket">
+            <input type="radio" name="tool" value="bucket">
+            <span></span>
+          </label>
+
+          <label class="oneColorBucket">
+            <input type="radio" name="tool" value="oneColorBucket">
+            <span></span>
+          </label>
+
+          <label class="eraser">
+            <input type="radio" name="tool" value="eraser">
+            <span></span>
+          </label>
+
+          <label class="linePainter">
+            <input type="radio" name="tool" value="linePainter">
+            <span></span>
+          </label>
+
+          <label class="colorPicker">
+            <input type="radio" name="tool" value="colorPicker">
+            <span></span>
+          </label>
+
+          <section class="colors">
+            <input type="color" class="currentColor" value="#498498">
+            <div class="changingColor"></div>
+            <input type="color" class="previousColor" value="#750076">
+          </section>
+          <section class="shortcut"></section>
+        </section>
+
+        <section class="gifLayers">
+          <ul class="gifLayersList">
+            <li class="gifLayersContainer">
+              <div class="preview activeLayer">
+                <canvas class="canvas2" id="canvas2" width="32" height="32"></canvas>
+                <span class="gifLayerButton number">1</span>
+                <button class="gifLayerButton delete"></button>
+                <button class="gifLayerButton copy"></button>
+                <button class="gifLayerButton move"></button>
+              </div>
+            </li>
+          </ul>
+          <button class="addFrame">
+            <div class="plus"></div>
+            <p>Add new frame</p>
+          </button>
+        </section>
+      </div>
+
+      <div class="canvasContainer">
+        <canvas class="canvas activeCanvas" width="32" height="32"></canvas>
+      </div>
+
+      <div class="layerContainer">
+        <section class="layerWrap">
+          <canvas class="layer" width="32" height="32"></canvas>
+          <button class="fullScreenButton"></button>
+        </section>
+        <section class="fpsChanging">
+          <p class="fpsValue">12</p>
+          <p>FPS</p>
+          <input class="fpsRange" type="range" min="0" max="24" step="1" value="12">
+        </section>
+
+        <section class="settings hideSet showSet">
+          <div class="settingButton settingsResizeButton activeButton"></div>
+          <div class="hiddenSettings">
+            <p class="settingTitle">Resize</p>
+            <div class="resizingContainer">
+              <label class="resizeItem">
+                <input type="radio" name="resize" value="32" checked>
+                <span class="resizeButton">32x32</span>
+              </label>
+              <label class="resizeItem">
+                <input type="radio" name="resize" value="64">
+                <span class="resizeButton">64x64</span>
+              </label>
+              <label class="resizeItem">
+                <input type="radio" name="resize" value="128">
+                <span class="resizeButton">128x128</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="settings hideSet">
+          <div class="settingButton settingsSaveButton"></div>
+          <div class="hiddenSettings">
+            <p class="settingTitle">Save</p>
+            <div class="sizeChanging">
+              <p class="currentSize">256</p>
+              <p>px</p>
+              <input class="sizeRange" type="range" min="32" max="640" step="32" value="256">
+            </div>
+            <div class="saveContainer">
+              <span class="saveButton gifSave">Save as .gif</span>
+              <span class="saveButton apngSave">Save as .apng</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="settings hideSet">
+          <div class="settingButton importButton"></div>
+          <div class="hiddenSettings">
+            <p class="settingTitle">Import</p>
+
+            <div class="importFile">
+              <span>Select .piskel file</span>
+              <label class="import">
+                <input type="file" class="importPiskelFile">
+              </label>
+            </div>
+
+            <div class="importFile">
+              <span>Select .png, .jpg, .gif file</span>
+              <label class="import">
+                <input type="file" class="importImage">
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="canvasInfo">
+          <p class="canvasSize"><span>[32x32]</span></p>
+          <p class="coord"><span></span></p>
+        </section>
+      </div>
+    </section>
+
+  </div>
+<script type="text/javascript" src="index.js"></script></body>
+
+</html>
