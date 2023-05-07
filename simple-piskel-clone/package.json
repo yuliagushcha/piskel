@@ -51,7 +51,7 @@
     "gifshot": "^0.4.5",
     "mapbox-gl": "^1.6.0",
     "node": "^13.3.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^8.0.0",
     "sass": "^1.23.7",
     "skycons": "^1.0.0",
     "upng-js": "^2.1.0",
